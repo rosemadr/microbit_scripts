@@ -1,6 +1,6 @@
 # Write your code here :-)
 from microbit import *
-import randint
+from random import randint
 
 while True:
     display.scroll('roll your die')
@@ -12,7 +12,8 @@ while True:
             music_outcome = music.WAWAWAWAA
         elif roll_outcome == 6:
             music_outcome = music.POWER_UP
-        else: music_outcome = music.BA_DING
+        else:
+            music_outcome = music.BA_DING
         display.show(roll_outcome + '!')
         music.play(music_outcome)
 
